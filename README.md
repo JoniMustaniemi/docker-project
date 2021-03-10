@@ -8,6 +8,6 @@
 
 - Push the built-container to registry.gitlab.com/mika.friman/hs-recruitment-1 with name `recruitment-task` with tag being your selected identifier
 - Drop me a email answering following questions:
- * How do you feel about the task?
- * How hard was it?
- * What security issues you find with the way it is built?
+    - How do you feel about the task?
+    - How hard was it?
+    - What security issues you find with the way it is built?
