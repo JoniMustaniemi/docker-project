@@ -4,7 +4,8 @@
 - Choose free url-valid string to be used as url-identifier and tag for your work. E.g. name, or any random string.
 - In given express server, create an api to fetch data from http://recruitment.hshake.dev/{identifier}/data
 - Update react app to fetch the data from the express server and render the results to styled html table (styling can be anything, but needs to be something)
-- Review Dockerfile and make sure it works with running it. 
+- Review Dockerfile and make sure it works by building and running it.
+    ``` docker build -t {tagname} . ```
     ``` docker run -it {tagname} ```
 - Push the built container to Gitlab Project's container registry. 
     - In order to push the container to registry, you need to create personal access token with scopes: 'api' and 'write_registry'. Then log in with these credentials:
