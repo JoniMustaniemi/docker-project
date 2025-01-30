@@ -1,10 +1,12 @@
 # Handshake recruitment exercise
+- To be taken into account:
+  - Runs with Node version 16
 
 - Clone repository
-- Choose free url-valid string to be used as url-identifier and tag for your work. E.g. name, or any random string.
+- Choose free url-valid string to be used as url-identifier and tag for your work. E.g. name or username
 - In given express server, create an api to fetch data from https://europe-north1-eloquent-hold-265914.cloudfunctions.net/recruitment-function/{identifier}/data
 - Update react app to fetch the data from the express server and render the results to styled html table (styling can be anything, but needs to be something)
-- Review Dockerfile and make sure it works by building and running it.
+- Review Dockerfile and make sure it works by building and running it. It contains problems you should be able to address and fix.
 
     ``` docker build -t {tagname} . ```
 
@@ -16,5 +18,7 @@
 - Drop me a email answering following questions:
     - The identifier you used and path to the container tag you uploaded.
     - How do you feel about the task?
+    - How much time you spend on doing it?
     - How hard was it?
     - What security issues you find with the way it is built?
+    -
