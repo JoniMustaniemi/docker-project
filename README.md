@@ -15,10 +15,12 @@
     - In order to push the container to registry, you need to create personal access token with scopes: 'api' and 'write_registry'. Then log in with these credentials:
     ``` docker login registry.gitlab.com ```
     - Info about how to build and push the container can be found in here: https://gitlab.com/handshake-recruitment/hs-recruitment-1/container_registry,  'CLI Commands' -section.
+    - Tag of the pushed container should be the identifier you picked in the beginning.
 - Drop me a email answering following questions:
     - The identifier you used and path to the container tag you uploaded.
     - How do you feel about the task?
     - How much time you spend on doing it?
     - How hard was it?
     - What security issues you find with the way it is built?
-    -
+    - How much AI was used?
+    - What requirements there are to run the container?
