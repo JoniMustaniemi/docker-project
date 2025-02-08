@@ -1,0 +1,29 @@
+services:
+  backend:
+    image: ghcr.io/jonimustaniemi/backend:mustaniemijoni
+
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    image: ghcr.io/jonimustaniemi/frontend:mustaniemijoni
+    build:
+      context: ./frontend
+    ports:
+      - "80:80" 
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_API_URL=http://backend:8080/
+
+networks:
+  app-network:
+    driver: bridge
