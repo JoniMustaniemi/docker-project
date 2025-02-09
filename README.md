@@ -40,11 +40,56 @@ docker-compose up
 ```
 
 ### 4. Access the services
-#### Frontend
+#### Frontend 🖥
  ```bash
 http://localhost:80
 ```
-#### Backend
+#### Backend ⚙️
+```bash
+http://localhost:8080
+```
+#
+OR
+#
+### Use `docker-compose.yml` to pull images and run them
+
+#### create a folder and include `docker-compose.yml`
+```bash
+services:
+  backend:
+    image: ghcr.io/jonimustaniemi/backend:mustaniemijoni
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    image: ghcr.io/jonimustaniemi/frontend:mustaniemijoni
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_API_URL=http://backend:8080/
+
+networks:
+  app-network:
+    driver: bridge
+```
+#### And use docker compose up within that folder to run them
+```bash
+docker compose up
+```
+####  After that you can access the services
+##### Frontend 🖥
+ ```bash
+http://localhost:80
+```
+##### Backend ⚙️
 ```bash
 http://localhost:8080
 ```
